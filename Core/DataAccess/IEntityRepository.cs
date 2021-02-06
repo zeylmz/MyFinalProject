@@ -10,7 +10,7 @@ namespace Core.DataAccess
     //class : referans tip olabilir
     //IEntity olabilir veya IEntity implemente edilmiş bir nesne olabilir.
     //new(): new'lenebilir olmalı
-    public interface IEntitiyRepository<T> where T : class, IEntity, new()
+    public interface IEntityRepository<T> where T : class, IEntity, new()
     {
         List<T> GetAll(Expression<Func<T,bool>> filter = null); //Filtre vermeyedebilirsin demek null
         T Get(Expression<Func<T, bool>> filter); // Filtre gerekli demek
